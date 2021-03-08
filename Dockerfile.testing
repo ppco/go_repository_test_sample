@@ -1,0 +1,12 @@
+FROM golang:1.14 as builder
+
+ARG HTTP_PROXY
+
+WORKDIR /go/src/project
+
+COPY ./project/go.mod ./
+COPY ./project/go.sum ./
+
+RUN http_proxy=$HTTP_PROXY go mod download
+
+COPY . ../

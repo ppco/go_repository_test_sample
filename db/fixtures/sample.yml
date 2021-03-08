@@ -1,0 +1,5 @@
+- id: 1
+  code: hoge
+  name: ほげ
+  created_at: RAW=NOW()
+  updated_at: RAW=NOW()
